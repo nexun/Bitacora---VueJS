@@ -19,6 +19,11 @@ import User from '../views/User.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from '../views/Main.vue'
+import Solutions from '../views/Solutions.vue'
+import Tutorials from '../views/Tutorials.vue'
+import Categories from '../views/Categories.vue'
+
+
 
 Vue.use(VueRouter)
 
@@ -92,19 +97,19 @@ const routes = [
         beforeEnter: requiresAuth
       },
       {
-        path: '/nucleo',
+        path: '/empresa',
         name: 'center_index',
         component: Center,
         beforeEnter: requiresAuth
       },      
       {
-        path: '/nucleo/nuevo',
+        path: '/empresa/nuevo',
         name: 'center_new',
         component: NewCenter,
         beforeEnter: requiresAuth
       },
       {
-        path: '/nucleo/:id',
+        path: '/empresa/:id',
         name: 'center_profile',
         component: Profile_Center,
         beforeEnter: requiresAuth

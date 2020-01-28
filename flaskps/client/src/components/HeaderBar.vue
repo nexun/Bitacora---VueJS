@@ -87,12 +87,12 @@ export default {
     position: sticky;
     top: 0;
     z-index: 1071;
-    background-color: #69262c;
+    background-color: #4879bf;
 }
 #user_menu_min{
     color: grey;
     background-color: #ffffff;
-    border-color: #69262c;
+    border-color: #ef8454;
 }
 #user_menu_option{
     color: grey;
