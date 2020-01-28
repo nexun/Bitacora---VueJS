@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= process.env.NODE_ENV === 'production' ? '../static/img/' : BASE_URL %>favicon.png">
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.VUE_APP_GOOGLE_MAPS_API_KEY %>&libraries=places"></script>
+    <title>Bitacora 2.0</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>Esta aplicación requiere JavaScript para funcionar correctamente. Por favor actìvelo para continuar.</strong>
+    </noscript>
+    <div id="app"></div>
+  </body>
+</html>
