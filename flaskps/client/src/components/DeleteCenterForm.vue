@@ -1,6 +1,6 @@
 <template>
 <div>
-    <button v-confirm="{ok: center_delete, message: 'Se eliminara el nucleo del sistema. Desea Continuar?'}" type="button" class="btn btn-custom-light" >
+    <button v-confirm="{ok: center_delete, message: 'Se eliminara la empresa del sistema. Desea Continuar?'}" type="button" class="btn btn-custom-light" >
        <span >Eliminar</span>
     </button>
     
@@ -19,7 +19,7 @@ export default {
             axios.delete('/center/' + this.$route.params.id)
                 .then(response => {
                     this.$toast.success('eliminado', 'Núcleo')
-                    this.$router.push('/nucleo')
+                    this.$router.push('/empresa')
                 })
                 .catch(error => {
                     this.$toast.error('Inténtelo más tarde', 'Error')

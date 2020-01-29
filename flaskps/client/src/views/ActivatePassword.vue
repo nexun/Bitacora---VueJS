@@ -73,7 +73,7 @@ export default {
             inputPassword2: null,
             errors: [],
             error: null,      
-            logo: "/static/img/logo_alt.png",
+            logo: "/static/img/logo_bitacora.png",
             uploading: "/static/img/upload.gif",
             success: "/static/img/upload2.gif",
             isActive:true,
@@ -189,7 +189,7 @@ export default {
   background-repeat: no-repeat;
   background-position: bottom;
   justify-content: center;
-  background-image: url("../assets/img/orquesta.jpg");
+  background-image: url("../assets/img/background.jpg");
 }
 
 div {

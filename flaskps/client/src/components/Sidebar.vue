@@ -15,12 +15,45 @@
                     </div>
                     <div :class="clase" v-if="getUser.permissions.includes('center_index')">
                     <li  :class="clase_li">
-                        <router-link to="/nucleo" class="nav-link">
-                            <archive-icon size="1.5x" class="custom-class" />
-                            <span>Empresas </span>
+                        <router-link to="/errores" class="nav-link">
+                              <alert-octagon-icon size="1.5x" class="custom-class"></alert-octagon-icon>
+                            <span>Errores </span>
                         </router-link>
                     </li>
-                    </div>                    
+                    </div>  
+                     <div :class="clase" v-if="getUser.permissions.includes('center_index')">
+                    <li  :class="clase_li">
+                        <router-link to="/soluciones" class="nav-link">
+                            <check-circle-icon size="1.5x" class="custom-class"></check-circle-icon>
+                            <span>Soluciones </span>
+                        </router-link>
+                    </li>
+                    </div> 
+                    <div :class="clase" v-if="getUser.permissions.includes('center_index')">
+                    <li  :class="clase_li">
+                        <router-link to="/tutoriales" class="nav-link">
+                            <help-circle-icon size="1.5x" class="custom-class"></help-circle-icon>
+                            <span>Tutoriales </span>
+                        </router-link>
+                    </li>
+                    </div>
+                     <div :class="clase" v-if="getUser.permissions.includes('center_index')">
+                    <li  :class="clase_li">
+                        <router-link to="/telefonos" class="nav-link">
+                            <phone-call-icon size="1.5x" class="custom-class"></phone-call-icon>
+                            <span>Telefonos </span>
+                        </router-link>
+                    </li>
+                    </div>  
+                    <div :class="clase" v-if="getUser.permissions.includes('user_index')" >
+                    <li :class="clase_li">
+                        <router-link to="/claves" class="nav-link">
+                            <key-icon size="1.5x" class="custom-class"></key-icon>
+                            <span>Claves </span>
+                        </router-link>
+                    </li>
+                    </div>
+                                    
                 </div>    
             </ul>
             <ul class="nav flex-column p-3">
@@ -33,6 +66,23 @@
                         </router-link>
                     </li>
                     </div>   
+                    
+                    <div :class="clase" v-if="getUser.permissions.includes('center_index')">
+                    <li  :class="clase_li">
+                        <router-link to="/empresas" class="nav-link">
+                            <archive-icon size="1.5x" class="custom-class" />
+                            <span>Empresas </span>
+                        </router-link>
+                    </li>
+                    </div>    
+                    <div :class="clase" v-if="getUser.permissions.includes('center_index')">
+                    <li  :class="clase_li">
+                        <router-link to="/categorias" class="nav-link">
+                            <list-icon size="1.5x" class="custom-class"></list-icon>
+                            <span>Categorias </span>
+                        </router-link>
+                    </li>
+                    </div> 
                     <div :class="clase" v-if="getUser.permissions.includes('configuration_index')">
                     <li :class="clase_li">
                         <router-link to="/configuracion" class="nav-link">
@@ -91,7 +141,7 @@
 <script>
 import axios from 'axios'
 import { mapGetters, mapActions} from 'vuex'
-import { Minimize2Icon, HomeIcon, UsersIcon, UserIcon, ArchiveIcon, MusicIcon, FolderIcon, SettingsIcon, InfoIcon, InboxIcon,CalendarIcon,BookOpenIcon,LogOutIcon } from 'vue-feather-icons'
+import { Minimize2Icon, KeyIcon, HelpCircleIcon, ListIcon, PhoneCallIcon, CheckCircleIcon, HomeIcon,AlertOctagonIcon, UsersIcon, UserIcon, ArchiveIcon, MusicIcon, FolderIcon, SettingsIcon, InfoIcon, InboxIcon,CalendarIcon,BookOpenIcon,LogOutIcon } from 'vue-feather-icons'
 import VueScreenSize from 'vue-screen-size'
 
 export default {
@@ -109,7 +159,13 @@ export default {
         InboxIcon,
         CalendarIcon,
         BookOpenIcon,
-        LogOutIcon
+        LogOutIcon,
+        AlertOctagonIcon,
+        CheckCircleIcon,
+        HelpCircleIcon,
+        KeyIcon,
+        PhoneCallIcon,
+        ListIcon
     },
     mixins: [VueScreenSize.VueScreenSizeMixin],    
     methods: {
@@ -186,7 +242,7 @@ export default {
 }
 
 .sidebar-options {
-    height: calc(100vh - 15rem);
+    height: calc(100vh - 20rem);
     padding-bottom: 3px;
     overflow-y: auto;
 }

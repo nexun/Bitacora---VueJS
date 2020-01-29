@@ -2,8 +2,7 @@
 <div class="login-container">
   <div class='card shadow w-auto py-5 px-4'>
       <form class='form-signin' @submit.prevent="submit">
-          <img src="../assets/img/logo_alt.png" class='image' />
-          <h1 class="h3 mb-4 font-weight-normal text-center">Ingresar al Sistema</h1>
+          <h1 class="h2 mb-4 font-weight-normal text-center">Acceso Bitacora 2.0</h1>
           <div class="form-group mt-1">
             <input autocomplete='off' type="email" name='inputEmail' id="inputEmail" class="form-control"
               placeholder=" " required autofocus v-model="form.inputEmail">
@@ -80,7 +79,7 @@ export default {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: white;
-  background-image: url("../assets/img/orquesta.jpg");
+  background-image: url("../assets/img/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;

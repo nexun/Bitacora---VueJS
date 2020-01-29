@@ -1,5 +1,5 @@
 <template>
-<tbody>
+<tbody class="table">
     <tr :key="row.id" v-for="row in rows">
         <td data-label="Usuario"><router-link :to="'usuario/'+ row.id">{{ row.username }}</router-link></td>
         <td data-label="Nombre">{{ row.first_name }}</td>

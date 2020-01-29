@@ -1,4 +1,9 @@
-## Bitacora 2.0
+<<<<<<< HEAD
+# bitacora
+Bienvenido 
+=======
+# Proyecto de Software 2019 - Grupo 15
+## Orquesta Escuela de Berisso
 
 1.  Clone proyect
 2.  Install virtual env into folder `$ pip install virtualenv`
@@ -8,3 +13,4 @@
 6.  Configure enviroment variable `export FLASK_ENV=development`
 7.  Configure app run file `export FLASK_APP=run.py`
 8.  Run the app `flask run`
+>>>>>>> master
