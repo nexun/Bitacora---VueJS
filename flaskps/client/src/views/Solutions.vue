@@ -1,36 +1,34 @@
 <template>
-    <div >
-        <ViewTitleOptions title="Errores por solucionar" :options=options />      
-        <SearchableList :listName=list :columns=columns :endpoint=endpoint :options=queryOptions class="my-4" />
+    <div>
+        <ViewTitleOptions title="Empresas" :options=options />
+        <SearchableList :listName=list :columns=columns :endpoint=endpoint :options=queryOptions />
     </div>
 </template>
 
 <script>
 import ViewTitleOptions from '../components/ViewTitleOptions'
 import SearchableList from '../components/SearchableList'
-import ErrorList from '../components/SearchableListHeader/ErrorList'
-
+import CenterList from '../components/SearchableListHeader/CenterList'
 
 export default {
-    name: 'Error',
+    name: 'Center',
     components: {
         ViewTitleOptions,
-        SearchableList,
-       
+        SearchableList
     },
     data() {
         return {
             options: [
                 {
                     id: 1,
-                    link: '/errores/nuevo',
+                    link: '/nucleo/nuevo',
                     name: 'Agregar',
-                    icon: 'alert-octagon'
+                    icon: 'plus'
                 }
             ],
-            list: ErrorList,
-            endpoint: "/item",
-            columns: ['CODIGO', 'CATEGORIA', 'DESCRIPCION', 'SOLUCIONAR', 'ELIMINAR'],
+            list: CenterList,
+            endpoint: "/center",
+            columns: ['Nombre','Direccion','Telefono' ],
             queryOptions: {
                 shouldSort: true,
                 tokenize: true,
@@ -40,17 +38,16 @@ export default {
                 maxPatternLength: 32,
                 minMatchCharLength: 1,
                 keys: [
-                    'code',
-                    'tittle'
+                    'name',
+                    'address',
+                    'phone_number'                    
                 ]
             }
         }
     }
 }
 </script>
-<style scoped>
-.card {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+
+<style>
+
 </style>

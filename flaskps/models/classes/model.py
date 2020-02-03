@@ -81,4 +81,27 @@ class User_role(Base):
     id_user = Column(ForeignKey('user.id', ondelete='CASCADE'), primary_key=True, nullable=False)
     id_role = Column(ForeignKey('role.id', ondelete='CASCADE'), primary_key=True, nullable=False, index=True)
 
+class Category(Base):
+    __tablename__ = 'category'
 
+    idcategory = Column(Integer, primary_key=True)
+    name = Column(String(45), nullable=False, unique=True)
+   
+class Item(Base):
+    __tablename__ = 'item'
+
+    iditem = Column(Integer, primary_key=True)
+    code = Column(String(45), nullable=False, unique=True)
+    tittle = Column(String(45), nullable=False) 
+    description = Column(String(255), nullable=False)   
+    solution = Column(String(255)) 
+    created_at = Column(DateTime, nullable=False)
+    updated_at = Column(DateTime)
+    id_category = Column(Integer, nullable=False)
+    id_state = Column(Integer, nullable=False)
+    
+class Item_Category(Base):
+    __tablename__ = 'item_category'
+    
+    id_category = Column(ForeignKey('category.idcategory', ondelete='CASCADE'), primary_key=True, nullable=False, index=True)
+    id_state = Column(ForeignKey('state.idstate', ondelete='CASCADE'), primary_key=True, nullable=False, index=True)

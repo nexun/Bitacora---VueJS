@@ -23,6 +23,7 @@ import Solution from '../views/Solution.vue'
 import Tutorial from '../views/Tutorial.vue'
 import Category from '../views/Category.vue'
 import Errors from '../views/Error.vue'
+import NewError from '../views/NewError.vue'
 import Key from '../views/Key.vue'
 import Phone from '../views/Phone.vue'
 
@@ -134,6 +135,12 @@ const routes = [
         path: '/errores',
         name: 'errores',
         component: Errors,
+        beforeEnter: requiresAuth
+      },
+      {
+        path: '/errores/nuevo',
+        name: 'errores_new',
+        component: NewError,
         beforeEnter: requiresAuth
       },
       {
