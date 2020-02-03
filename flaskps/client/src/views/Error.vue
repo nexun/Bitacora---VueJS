@@ -23,13 +23,13 @@ export default {
             options: [
                 {
                     id: 1,
-                    link: '/error/nuevo',
+                    link: '/errores/nuevo',
                     name: 'Agregar',
                     icon: 'alert-octagon'
                 }
             ],
             list: ErrorList,
-            endpoint: "/user",
+            endpoint: "/item",
             columns: ['CODIGO', 'CATEGORIA', 'DESCRIPCION', 'SOLUCIONAR', 'ELIMINAR'],
             queryOptions: {
                 shouldSort: true,
@@ -40,8 +40,8 @@ export default {
                 maxPatternLength: 32,
                 minMatchCharLength: 1,
                 keys: [
-                    'username',
-                    'email'
+                    'code',
+                    'tittle'
                 ]
             }
         }

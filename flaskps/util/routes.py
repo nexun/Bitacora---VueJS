@@ -5,6 +5,7 @@ from flaskps.controllers import administrator
 from flaskps.controllers import configuration
 from flaskps.controllers import role
 from flaskps.controllers import user
+from flaskps.controllers import item
 from flaskps.controllers import mail_sender
 from flaskps.controllers import center
 from flaskps.controllers import category
@@ -86,15 +87,31 @@ app.add_url_rule('/center/new','center_new', center.up, methods=['POST'])
 # Category list
 app.add_url_rule('/category', 'category_index', category.index)
 
-# Center Profile
+# Category Profile
 app.add_url_rule('/category/<id>','category_profile', category.get_category, methods=['GET'])
 app.add_url_rule('/category/<id>','category_update_info', category.category_update, methods=['PUT']) 
 app.add_url_rule('/category/<id>','category_delete', category.category_delete, methods=['DELETE'])
 
 app.add_url_rule('/category/exist/<id>','category_exist', category.exist, methods=['GET'])     
 
-# Center New 
+# Category New 
 app.add_url_rule('/category/new','category_new', category.up, methods=['POST'])
+
+##########################################################################################################################
+################################################ Item ROUTES ##############################################################
+
+# Item list
+app.add_url_rule('/item', 'item_index', item.index)
+
+# Item Profile
+app.add_url_rule('/item/<id>','item_profile', item.get_item, methods=['GET'])
+app.add_url_rule('/item/<id>','item_update_info', item.item_update, methods=['PUT']) 
+app.add_url_rule('/item/<id>','item_delete', item.item_delete, methods=['DELETE'])
+
+app.add_url_rule('/item/exist/<id>','item_exist', item.exist, methods=['GET'])     
+
+# Item New 
+app.add_url_rule('/item/new','item_new', item.up, methods=['POST'])
 
 ##########################################################################################################################
 ################################################ VARIOUS ROUTES ##############################################################

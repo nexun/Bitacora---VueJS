@@ -109,7 +109,8 @@ export default {
                     for (const value of Object.values(this.form)) {
                         value.isValid = true
                     }
-                    this.$router.push('/categorias')
+                    this.$router.go()
+                    
                 })
                 .catch(error => {
                     if (error.response.status == 400) {
