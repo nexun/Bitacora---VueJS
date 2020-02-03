@@ -21,7 +21,7 @@
         </div>
         <div class="card-body p-0">
             <table class="table-hover custom-table">
-                <thead class="thead-light">
+                <thead class="thead-dark">
                     <tr>
                         <th :key="column.name" v-for="column in columns" scope="col" class="py-3">
                             {{ column | capitalize }}
@@ -160,6 +160,7 @@ export default {
     width: 1em;
 }
 #sercheable_form{
+    background-color: #fb6363;
     padding: 7px;
     /*jejeje*/
 }

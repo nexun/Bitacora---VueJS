@@ -1,3 +1,4 @@
+aniso8601==8.0.0
 astroid==2.3.1
 autopep8==1.4.4
 blinker==1.4
@@ -5,6 +6,7 @@ certifi==2019.11.28
 chardet==3.0.4
 Click==7.0
 colorama==0.4.1
+elasticsearch==7.5.1
 Flask==1.1.1
 Flask-Cors==3.0.8
 Flask-Hashing==1.1
@@ -30,6 +32,7 @@ protobuf==3.10.0
 pycodestyle==2.5.0
 pylint==2.4.2
 PyMySQL==0.9.3
+pytz==2019.3
 random-password-generator==2.1.0
 requests==2.22.0
 six==1.12.0

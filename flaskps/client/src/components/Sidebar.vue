@@ -39,7 +39,7 @@
                     </div>
                      <div :class="clase" v-if="getUser.permissions.includes('center_index')">
                     <li  :class="clase_li">
-                        <router-link to="/tutoriales" class="nav-link">
+                        <router-link to="/telefonos" class="nav-link">
                             <phone-call-icon size="1.5x" class="custom-class"></phone-call-icon>
                             <span>Telefonos </span>
                         </router-link>
@@ -47,7 +47,7 @@
                     </div>  
                     <div :class="clase" v-if="getUser.permissions.includes('user_index')" >
                     <li :class="clase_li">
-                        <router-link to="/usuario" class="nav-link">
+                        <router-link to="/claves" class="nav-link">
                             <key-icon size="1.5x" class="custom-class"></key-icon>
                             <span>Claves </span>
                         </router-link>

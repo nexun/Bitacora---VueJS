@@ -81,4 +81,10 @@ class User_role(Base):
     id_user = Column(ForeignKey('user.id', ondelete='CASCADE'), primary_key=True, nullable=False)
     id_role = Column(ForeignKey('role.id', ondelete='CASCADE'), primary_key=True, nullable=False, index=True)
 
+class Category(Base):
+    __tablename__ = 'category'
+
+    idcategory = Column(Integer, primary_key=True)
+    name = Column(String(45), nullable=False, unique=True)
+   
 

@@ -17,6 +17,9 @@ html, body, #app {
 
 body {
     background-color: #fdfdfd!important;
+    font-size: 15px;
+    font-family: monospace;
+    
 }
 
 .dg-btn,

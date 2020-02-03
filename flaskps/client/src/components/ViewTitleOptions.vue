@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { UserPlusIcon, ArrowLeftIcon, FolderPlusIcon, ShieldIcon, PlusIcon, UserCheckIcon } from 'vue-feather-icons'
+import { UserPlusIcon, ArrowLeftIcon, FolderPlusIcon, ShieldIcon, PlusIcon, UserCheckIcon, AlertOctagonIcon } from 'vue-feather-icons'
 
 export default {
     name: 'ViewTitleOptions',
@@ -24,7 +24,8 @@ export default {
         FolderPlusIcon,
         ShieldIcon,
         PlusIcon,
-        UserCheckIcon
+        UserCheckIcon,
+        AlertOctagonIcon,
     },
     props: [
         'title',

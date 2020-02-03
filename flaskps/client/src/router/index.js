@@ -19,9 +19,13 @@ import User from '../views/User.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from '../views/Main.vue'
-import Solutions from '../views/Solutions.vue'
-import Tutorials from '../views/Tutorials.vue'
-import Categories from '../views/Categories.vue'
+import Solution from '../views/Solution.vue'
+import Tutorial from '../views/Tutorial.vue'
+import Category from '../views/Category.vue'
+import Errors from '../views/Error.vue'
+import Key from '../views/Key.vue'
+import Phone from '../views/Phone.vue'
+
 
 
 
@@ -113,7 +117,43 @@ const routes = [
         name: 'center_profile',
         component: Profile_Center,
         beforeEnter: requiresAuth
-      },     
+      },       
+      {
+        path: '/soluciones',
+        name: 'solution',
+        component: Solution,
+        beforeEnter: requiresAuth
+      },
+      {
+        path: '/tutoriales',
+        name: 'tutorial',
+        component: Tutorial,
+        beforeEnter: requiresAuth
+      },    
+      {
+        path: '/errores',
+        name: 'errores',
+        component: Errors,
+        beforeEnter: requiresAuth
+      },
+      {
+        path: '/telefonos',
+        name: 'phone',
+        component: Phone,
+        beforeEnter: requiresAuth
+      },
+      {
+        path: '/claves',
+        name: 'keys',
+        component: Key,
+        beforeEnter: requiresAuth
+      },
+      {
+        path: '/categorias',
+        name: 'categories',
+        component: Category,
+        beforeEnter: requiresAuth
+      },
       {
         // This is the default view for Main
         // It has to be the last children

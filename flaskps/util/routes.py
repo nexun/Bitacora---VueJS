@@ -7,6 +7,7 @@ from flaskps.controllers import role
 from flaskps.controllers import user
 from flaskps.controllers import mail_sender
 from flaskps.controllers import center
+from flaskps.controllers import category
 from flaskps.controllers import about
 
 # Home
@@ -78,6 +79,22 @@ app.add_url_rule('/center/exist/<id>','center_exist', center.exist, methods=['GE
 
 # Center New 
 app.add_url_rule('/center/new','center_new', center.up, methods=['POST'])
+
+##########################################################################################################################
+################################################ Category ROUTES ##############################################################
+
+# Category list
+app.add_url_rule('/category', 'category_index', category.index)
+
+# Center Profile
+app.add_url_rule('/category/<id>','category_profile', category.get_category, methods=['GET'])
+app.add_url_rule('/category/<id>','category_update_info', category.category_update, methods=['PUT']) 
+app.add_url_rule('/category/<id>','category_delete', category.category_delete, methods=['DELETE'])
+
+app.add_url_rule('/category/exist/<id>','category_exist', category.exist, methods=['GET'])     
+
+# Center New 
+app.add_url_rule('/category/new','category_new', category.up, methods=['POST'])
 
 ##########################################################################################################################
 ################################################ VARIOUS ROUTES ##############################################################
