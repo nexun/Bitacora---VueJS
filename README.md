@@ -2,8 +2,6 @@
 # bitacora
 Bienvenido 
 =======
-# Proyecto de Software 2019 - Grupo 15
-## Orquesta Escuela de Berisso
 
 1.  Clone proyect
 2.  Install virtual env into folder `$ pip install virtualenv`
